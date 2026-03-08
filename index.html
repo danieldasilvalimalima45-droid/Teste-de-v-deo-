@@ -3,220 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DMpornos - Premium Content</title>
+    <title>DMpornos - Premium</title>
     <style>
-        body {
-            background-color: #0f0f0f;
-            color: white;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            overflow-x: hidden;
-        }
-
-        /* BARRA DE AVISO +18 */
-        #age-gate {
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background-color: rgba(0,0,0,0.95);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 9999;
-            text-align: center;
-        }
-
-        .modal-box {
-            background: #1a1a1a;
-            padding: 30px;
-            border-radius: 12px;
-            border: 1px solid #ff0000;
-            max-width: 320px;
-        }
-
-        .btn-age {
-            background-color: #ff0000;
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            font-size: 16px;
-            font-weight: bold;
-            border-radius: 4px;
-            cursor: pointer;
-            margin-top: 15px;
-            width: 100%;
-        }
-
-        /* HEADER */
-        .header {
-            background-color: #0f0f0f;
-            padding: 15px;
-            text-align: center;
-            border-bottom: 1px solid #333;
-        }
-
-        #lupa {
-            width: 90%;
-            padding: 10px;
-            border-radius: 20px;
-            border: 1px solid #444;
-            background-color: #1a1a1a;
-            color: white;
-            outline: none;
-        }
-
-        /* PLAYER */
-        .player-container {
-            width: 100%;
-            background-color: #000;
-        }
-
-        video {
-            width: 100%;
-            max-height: 500px;
-            display: block;
-            background-color: #000;
-        }
-
-        .video-info {
-            padding: 15px;
-        }
-
-        #titulo-atual {
-            font-size: 18px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        /* BOTÃO LIKE FACEBOOK */
-        .btn-like {
-            background-color: #3a3b3c;
-            color: white;
-            border: none;
-            padding: 10px 18px;
-            border-radius: 6px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: 600;
-        }
-
-        .btn-like.ativado {
-            background-color: #0866ff; /* Azul Facebook */
-        }
-
-        /* COMENTÁRIOS */
-        .comentarios {
-            padding: 15px;
-            background-color: #0f0f0f;
-        }
-
-        .comentario-item {
-            display: flex;
-            gap: 12px;
-            margin-bottom: 15px;
-        }
-
-        .avatar {
-            width: 35px;
-            height: 35px;
-            border-radius: 50%;
-            background-color: #555;
-        }
-
-        .user-name {
-            font-size: 13px;
-            font-weight: bold;
-            color: #ccc;
-        }
-
-        .msg {
-            font-size: 14px;
-            color: #eee;
-            margin-top: 3px;
-        }
+        body { background-color: #000; color: white; font-family: sans-serif; margin: 0; text-align: center; }
+        .header { padding: 15px; border-bottom: 1px solid #222; }
+        video { width: 100%; max-width: 600px; background: #111; display: block; margin: 0 auto; }
+        .info { padding: 20px; text-align: left; max-width: 600px; margin: 0 auto; }
+        .btn-like { background: #3a3b3c; color: white; border: none; padding: 10px 20px; border-radius: 5px; font-weight: bold; }
     </style>
 </head>
 <body>
 
-    <div id="age-gate">
-        <div class="modal-box">
-            <h2 style="color: #ff0000; margin: 0;">CONTEÚDO ADULTO</h2>
-            <p>Você confirma que tem mais de 18 anos?</p>
-            <button class="btn-age" onclick="entrar()">SIM, TENHO +18</button>
-        </div>
-    </div>
-
     <div class="header">
-        <input type="text" id="lupa" placeholder="🔍 Buscar vídeos...">
+        <h2 style="color: #ff0000; margin: 0;">DM PORNOS</h2>
     </div>
 
-    <div class="player-container">
-        <video id="video-main" controls playsinline preload="metadata">
-            <source src="video1.mp4" type="video/mp4">
-            Seu navegador não suporta vídeos.
-        </video>
+    <video controls playsinline preload="metadata">
+        <source src="video1.mp4" type="video/mp4">
+        Seu navegador não suporta vídeos.
+    </video>
 
-        <div class="video-info">
-            <p id="titulo-atual">Vídeo Premium Exclusivo</p>
-            <button class="btn-like" id="likeBtn" onclick="curtir()">
-                👍 Curtir · <span id="contagem">1.420</span>
-            </button>
-        </div>
+    <div class="info">
+        <h3>Vídeo Premium Exclusivo</h3>
+        <button class="btn-like">👍 Curtir · 1.420</button>
     </div>
-
-    <div class="comentarios">
-        <h4 style="color: #666; border-bottom: 1px solid #333; padding-bottom: 5px;">Comentários Recentes</h4>
-        
-        <div class="comentario-item">
-            <div class="avatar"></div>
-            <div>
-                <div class="user-name">Paulo_Zika</div>
-                <div class="msg">Essa novinha é braba demais! 🔥</div>
-            </div>
-        </div>
-
-        <div class="comentario-item">
-            <div class="avatar"></div>
-            <div>
-                <div class="user-name">Carlos Eduardo</div>
-                <div class="msg">O vídeo carregou liso, boa!</div>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        let likes = 1420;
-        let jaCurtiu = false;
-
-        // Verifica se já aceitou o aviso antes
-        window.onload = function() {
-            if (localStorage.getItem('adult_check') === 'true') {
-                document.getElementById('age-gate').style.display = 'none';
-            }
-        }
-
-        function entrar() {
-            localStorage.setItem('adult_check', 'true');
-            document.getElementById('age-gate').style.display = 'none';
-        }
-
-        function curtir() {
-            const btn = document.getElementById('likeBtn');
-            const count = document.getElementById('contagem');
-            if (!jaCurtiu) {
-                likes++;
-                btn.classList.add('ativado');
-                jaCurtiu = true;
-            } else {
-                likes--;
-                btn.classList.remove('ativado');
-                jaCurtiu = false;
-            }
-            count.innerText = likes.toLocaleString('pt-BR');
-        }
-    </script>
 
 </body>
 </html>
